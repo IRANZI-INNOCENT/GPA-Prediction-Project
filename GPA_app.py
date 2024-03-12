@@ -13,7 +13,6 @@ with col1:
     st.text("STUDY TIME")
     attendance = st.number_input('Attendance', min_value=0, max_value=100, step=1, value=5)
     class_hours = st.number_input('Class_hours_week', min_value=0, max_value=25, step=1, value=1)
-    online_learning = st.number_input('Online_learning', min_value=0, max_value=25, step=1, value=1)
     library_hours = st.number_input('Library_hours', min_value=0, max_value=25, step=1, value=1)
 
 with col2:
@@ -26,7 +25,7 @@ with col2:
 st.text('')
 if st.button("Predict GPA"):
     # Call predict function
-    result = predict(np.array([[attendance, class_hours, online_learning, jobs, extracurricular, sleep_hours, library_hours, major == 'Arts', major == 'Business', major == 'Science', major == 'Engineering']]))
+    result = predict(np.array([[attendance, class_hours, jobs, extracurricular, sleep_hours, library_hours, major == 'Arts', major == 'Business', major == 'Science', major == 'Engineering']]))
     if result[0] < 2.0:
         st.warning("Your predicted GPA is below 2.0. Consider seeking academic advice and improving your study habits.")
     st.markdown(f'<p style="font-size:36px;font-weight:bold;">Predicted GPA: {result[0]:.2f}</p>', unsafe_allow_html=True)
