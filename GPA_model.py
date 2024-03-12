@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 Datathon = pd.read_csv('data.csv')
-x,y = Datathon[['Class_hours_week','Attendance','Extracurricular','Online_learning','Sleep_hours','Business','Library_hours','Arts',
+x,y = Datathon[['Class_hours_week','Attendance','Extracurricular','Sleep_hours','Business','Library_hours','Arts',
                'Engineering','Science','jobs']].values, Datathon["College GPA"].values
 x_train, x_test,y_train,y_test = train_test_split(x,y, test_size=0.3, random_state=0)
 model = LinearRegression().fit(x_train, y_train)
