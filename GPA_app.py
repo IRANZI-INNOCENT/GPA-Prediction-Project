@@ -27,6 +27,8 @@ st.text('')
 if st.button("Predict GPA"):
     # Call predict function
     result = predict(np.array([[attendance, class_hours, online_learning, jobs, extracurricular, sleep_hours, library_hours, major == 'Arts', major == 'Business', major == 'Science', major == 'Engineering']]))
+    if result[0] < 2.0:
+        st.warning("Your predicted GPA is below 2.0. Consider seeking academic advice and improving your study habits.")
     st.markdown(f'<p style="font-size:36px;font-weight:bold;">Predicted GPA: {result[0]:.2f}</p>', unsafe_allow_html=True)
 
 st.text('')
