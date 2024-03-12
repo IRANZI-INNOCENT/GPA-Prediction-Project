@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 from GPA_prediction import predict
 
-st.title('GPA PREDICTION APP')
+st.title('GPA PREDICTION MODEL')
 
 st.markdown('Enter your preferred parameters to predict your GPA. For Science,Engineering, Arts, Business and jobs; Enter 1 for Yes and 0 for NO')
 
