@@ -11,7 +11,7 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.text("STUDY TIME")
-    attendance = st.slider('Attendance', 0, 100, 5)
+    attendance = st.number_input('Attendance', min_value=0, max_value=100, step=1, value=5)
     class_hours = st.slider('Class_hours_week', 0, 25, 1)
     online_learning = st.slider('Online_learning', 0, 25, 1)
     library_hours = st.slider('Library_hours', 0, 25, 1)
