@@ -21,7 +21,7 @@ with col2:
     jobs = st.number_input('jobs', min_value=0, max_value=1, step=1, value=0)
     extracurricular = st.number_input('Extracurricular', min_value=0, max_value=10, step=1, value=0)
     sleep_hours = st.number_input('Sleep_hours', min_value=0, max_value=10, step=1, value=0)
-    major = st.selectbox('Major', ['Business', 'Science', 'Engineering', 'Arts'])
+    major = st.selectbox('Major', ['Business', 'Science', 'Engineering', 'Humanities'])
 
 st.text('')
 if st.button("Predict GPA"):
