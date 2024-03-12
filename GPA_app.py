@@ -4,7 +4,7 @@ from GPA_prediction import predict
 
 st.title('GPA PREDICTION MODEL')
 
-st.markdown('Predict your GPA with accuracy. Set your GPA now!')
+st.markdown('Predict your GPA with accuracy. Set your targte GPA now!')
 
 st.header("STUDENTS STUDY PATTERNS")
 col1, col2 = st.columns(2)
