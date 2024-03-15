@@ -11,15 +11,15 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.text("STUDY TIME")
-    attendance = st.number_input('Attendance', min_value=0, max_value=100, step=1, value=5)
-    class_hours = st.number_input('Class_hours_week', min_value=0, max_value=25, step=1, value=1)
-    library_hours = st.number_input('Library_hours', min_value=0, max_value=25, step=1, value=1)
-    online_learning = st.number_input('Time Online', min_value=0, max_value=15, step=1, value=0)
+    attendance = st.number_input('Attendance(%)', min_value=0, max_value=100, step=1, value=5)
+    class_hours = st.number_input('Hours in Class', min_value=0, max_value=25, step=1, value=1)
+    library_hours = st.number_input('Hours in Library', min_value=0, max_value=25, step=1, value=1)
+    online_learning = st.number_input('Online Hours', min_value=0, max_value=15, step=1, value=0)
 
 with col2:
     st.text("ENGAGEMENTS")
-    jobs = st.number_input('jobs', min_value=0, max_value=1, step=1, value=0)
-    extracurricular = st.number_input('Extracurricular', min_value=0, max_value=10, step=1, value=0)
+    jobs = st.selectbox('Jobs', ['Yes', 'No'])
+    extracurricular = st.number_input('No. of Extracurriculars', min_value=0, max_value=10, step=1, value=0)
     sleep_hours = st.number_input('Sleep_hours', min_value=0, max_value=10, step=1, value=0)
     major = st.selectbox('Major', ['Business', 'Science', 'Engineering', 'Humanities'])
 
@@ -34,4 +34,4 @@ if st.button("Predict GPA"):
 
 st.text('')
 st.text('')
-st.markdown('`By`  IRANZI ft MARGRET | ` Code:` [GitHub](https://github.com/IRANZI-INNOCENT/Data-Sciennce)')
+st.markdown('Developed By: IRANZI INNOCENT vs MARGRET AMONDI | ` Code:` [GitHub](https://github.com/IRANZI-INNOCENT/Data-Sciennce)')
