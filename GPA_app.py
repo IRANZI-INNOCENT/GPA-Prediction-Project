@@ -18,13 +18,15 @@ with col1:
 
 with col2:
     st.text("ENGAGEMENTS")
-    jobs = st.number_input('Jobs',min_value=0, max_value=1, step=1, value=0)
+    jobs_options = ["Yes", "No"]
+    jobs = st.selectbox('Jobs', jobs_options)
     extracurricular = st.number_input('No. of Extracurriculars', min_value=0, max_value=10, step=1, value=0)
     sleep_hours = st.number_input('Sleep_hours', min_value=0, max_value=10, step=1, value=0)
     major = st.selectbox('Major', ['Business', 'Science', 'Engineering', 'Humanities'])
 
 st.text('')
 if st.button("Predict GPA"):
+    jobs_value = 0 if jobs == "Yes" else 1
     # Call predict function
     result = predict(np.array([[attendance, class_hours, online_learning,jobs, extracurricular, sleep_hours, library_hours, major == 'Arts', major == 'Business', major == 'Science', major == 'Engineering']]))
     result += 0.2
