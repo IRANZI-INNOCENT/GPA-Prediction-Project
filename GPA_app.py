@@ -14,7 +14,7 @@ with col1:
     attendance = st.number_input('Attendance', min_value=0, max_value=100, step=1, value=5)
     class_hours = st.number_input('Class_hours_week', min_value=0, max_value=25, step=1, value=1)
     library_hours = st.number_input('Library_hours', min_value=0, max_value=25, step=1, value=1)
-    online_learning = st.number_input('Online_learning', min_value=0, max_value=10, step=1, value=0)
+    online_learning = st.number_input('Time Online', min_value=0, max_value=15, step=1, value=0)
 
 with col2:
     st.text("ENGAGEMENTS")
