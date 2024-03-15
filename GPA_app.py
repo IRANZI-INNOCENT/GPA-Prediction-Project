@@ -18,7 +18,7 @@ with col1:
 
 with col2:
     st.text("ENGAGEMENTS")
-    jobs = st.selectbox('Jobs', ['Yes', 'No'])
+    jobs = st.number_input('Jobs',min_value=0, max_value=1, step=1, value=0)
     extracurricular = st.number_input('No. of Extracurriculars', min_value=0, max_value=10, step=1, value=0)
     sleep_hours = st.number_input('Sleep_hours', min_value=0, max_value=10, step=1, value=0)
     major = st.selectbox('Major', ['Business', 'Science', 'Engineering', 'Humanities'])
