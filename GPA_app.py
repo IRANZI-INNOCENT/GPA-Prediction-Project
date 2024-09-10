@@ -34,4 +34,4 @@ if st.button("Predict GPA"):
 
 st.text('')
 st.text('')
-st.markdown('Developed By: IRANZI INNOCENT vs MARGRET AMONDI | ` Code:` [GitHub](https://github.com/IRANZI-INNOCENT/Data-Sciennce)')
+st.markdown('Developed By: IRANZI INNOCENT vs MARGRET AMONDI | ` Code:` [GitHub](https://github.com/IRANZI-INNOCENT/GPA-Prediction-Project)')
